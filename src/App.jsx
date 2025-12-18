@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProductProvider } from './context/ProductContext.jsx';
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router';
+import { Routes, Route, BrowserRouter } from 'react-router';
 import '/src/styles/App.scss';
 import FrontPage from './pages/FrontPage';
 import ProductPage from './pages/ProductPage';
@@ -18,25 +18,23 @@ import FAQPage from './pages/FAQPage.jsx';
 function App() {
 	return (
 		<BrowserRouter basename="/HiFiHorizon">
-		<ProductProvider>
-			<Router>
-				<Routes>
-					<Route path="/" element={<FrontPage />} />
-					<Route path="/product/:id" element={<ProductPage />} />
-					<Route path="/about" element={<AboutPage />} />
-					<Route path="/login" element={<LoginPage />} />
-					<Route path="/create-account" element={<CreatePage />} />
-					<Route path="/profile" element={<ProfilePage />} />
-					<Route path="/shop" element={<ShopPage />} />
-					<Route path="/contact" element={<ContactPage />} />
-					<Route path="/cart" element={<CartPage />} />
-					<Route path="/payment" element={<PaymentPage />} />
-					<Route path="/invoice" element={<InvoicePage />} />
-					<Route path="/faq" element={<FAQPage />} />
-				</Routes>
-			</Router>
-		</ProductProvider>
-		</BrowserRouter>
+            <ProductProvider>
+                <Routes>
+                    <Route path="/" element={<FrontPage />} />
+                    <Route path="/product/:id" element={<ProductPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/login" element={<LoginPage />} />
+                    <Route path="/create-account" element={<CreatePage />} />
+                    <Route path="/profile" element={<ProfilePage />} />
+                    <Route path="/shop" element={<ShopPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/cart" element={<CartPage />} />
+                    <Route path="/payment" element={<PaymentPage />} />
+                    <Route path="/invoice" element={<InvoicePage />} />
+                    <Route path="/faq" element={<FAQPage />} />
+                </Routes>
+            </ProductProvider>
+        </BrowserRouter>
 	);
 }
 
