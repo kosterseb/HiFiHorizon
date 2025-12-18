@@ -9,7 +9,7 @@ export default function FrontPage() {
 	const [newsletterEmail, setNewsletterEmail] = useState('');
 
 	useEffect(() => {
-		fetch('http://localhost:3000/api/products/random')
+		fetch('https://hifihorizon.onrender.com/api/products/random')
 			.then(res => res.json())
 			.then(data => {
 
@@ -36,7 +36,7 @@ export default function FrontPage() {
 									name: productKey,
 									price: details.price,
 									imageUrl: details.image
-										? `http://localhost:3000/${details.image}`
+										? `https://hifihorizon.onrender.com/${details.image}`
 										: 'https://via.placeholder.com/150',
 								});
 							});
@@ -53,7 +53,7 @@ export default function FrontPage() {
 	const handleNewsletterSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await fetch('http://localhost:3000/api/newsletter', {
+			const response = await fetch('https://hifihorizon.onrender.com/api/newsletter', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ email: newsletterEmail })

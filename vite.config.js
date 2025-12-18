@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'https://hifihorizon.onrender.com',
         changeOrigin: true,
         secure: false, // Set to true if using HTTPS
       },
