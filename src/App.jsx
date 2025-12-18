@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProductProvider } from './context/ProductContext.jsx';
-import { BrowserRouter as Router, Routes, Route } from 'react-router';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router';
 import '/src/styles/App.scss';
 import FrontPage from './pages/FrontPage';
 import ProductPage from './pages/ProductPage';
@@ -17,6 +17,7 @@ import FAQPage from './pages/FAQPage.jsx';
 
 function App() {
 	return (
+		<BrowserRouter basename="/HiFiHorizon">
 		<ProductProvider>
 			<Router>
 				<Routes>
@@ -35,6 +36,7 @@ function App() {
 				</Routes>
 			</Router>
 		</ProductProvider>
+		</BrowserRouter>
 	);
 }
 
