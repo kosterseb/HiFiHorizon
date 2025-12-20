@@ -3,11 +3,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/HiFiHorizon/',
   server: {
     proxy: {
       '/api': {
-        target: 'https://hifihorizon.onrender.com',
+        target: 'http://localhost:3000',
         changeOrigin: true,
         secure: false, // Set to true if using HTTPS
       },

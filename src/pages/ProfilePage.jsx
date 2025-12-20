@@ -24,7 +24,7 @@ export default function ProfilePage() {
 
     const handleUpdate = async () => {
         try {
-            const response = await fetch(`https://hifihorizon.onrender.com/api/users/update/${user._id}`, {
+            const response = await fetch(`http://localhost:3000/api/users/update/${user._id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(editData),
