@@ -9,7 +9,7 @@ export default defineConfig({
       '/api': {
         target: 'https://hifihorizon.onrender.com',
         changeOrigin: true,
-        secure: false, // Set to true if using HTTPS
+        secure: false, 
       },
     },
   },

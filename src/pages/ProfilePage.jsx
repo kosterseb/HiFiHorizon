@@ -52,7 +52,7 @@ export default function ProfilePage() {
                 
                 <div className="info-row">
                     <div className="info-row__left">
-                        <img src={`/src/assets/profile-icons/${icon}.svg`} alt={icon} />
+                        <img src={`src/assets/profile-icons/${icon}.svg`} alt={icon} />
                     </div>
 
                     <div className="info-row__middle">
