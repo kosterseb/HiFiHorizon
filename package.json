@@ -1,4 +1,5 @@
 {
+  "homepage": "kosterseb.github.io/HiFiHorizon/",
   "name": "wu14-hifi-horizon-the-bald-eagles",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +10,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "PORT=3000 node server.js"
+    "server": "PORT=3000 node server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "cors": "^2.8.5",
